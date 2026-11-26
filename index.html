@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alann Storee — Aplikasi Premium &amp; Jasa Edit Preset AM</title>
+  <meta name="description" content="Katalog Aplikasi Premium (CapCut Pro, Alight Motion, Canva Pro, Netflix) dan Jasa Edit Preset Alight Motion">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          boxShadow: {
+            'brutal': '4px 4px 0px 0px #000000',
+            'brutal-lg': '6px 6px 0px 0px #000000',
+            'brutal-sm': '2px 2px 0px 0px #000000',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(22px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            popIn: {
+              '0%': { opacity: '0', transform: 'scale(0.94)' },
+              '100%': { opacity: '1', transform: 'scale(1)' },
+            }
+          },
+          animation: {
+            'fade-up': 'fadeInUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) backwards',
+            'pop-in': 'popIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-[#f8fafc] text-slate-900 font-sans antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="fixed top-20 right-4 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b-[3px] border-black px-4 sm:px-8 py-3.5">
+    <div class="max-w-6xl mx-auto flex items-center justify-between gap-2">
+      <a href="#" class="flex items-center gap-3 group shrink-0">
+        <div class="w-10 h-10 bg-blue-600 text-white border-[2.5px] border-black rounded-xl flex items-center justify-center shadow-brutal-sm group-hover:-translate-y-0.5 transition-transform">
+          <i class="fas fa-bolt text-lg"></i>
+        </div>
+        <span class="font-extrabold text-xl tracking-tight text-black">
+          Alann Storee
+        </span>
+      </a>
+
+      <div class="flex items-center gap-2 sm:gap-2.5 flex-wrap justify-end">
+        <a href="#products" class="px-3 sm:px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-100 text-black border-2 border-black shadow-brutal-sm hover:bg-slate-200 hover:-translate-y-0.5 transition-all flex items-center gap-1.5">
+          <i class="fas fa-store text-xs"></i>
+          <span>Katalog</span>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029VbDSglRCxoB5Qn05xM1I" target="_blank" class="px-3 sm:px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-black border-2 border-black shadow-brutal-sm hover:bg-emerald-50 hover:-translate-y-0.5 transition-all flex items-center gap-1.5">
+          <i class="fas fa-bullhorn text-[#128c7e] text-xs"></i>
+          <span class="hidden md:inline">Saluran WA</span>
+        </a>
+
+        <a href="https://www.tiktok.com/@lannnx12" target="_blank" class="px-3 sm:px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-black border-2 border-black shadow-brutal-sm hover:bg-slate-100 hover:-translate-y-0.5 transition-all flex items-center gap-1.5">
+          <i class="fab fa-tiktok text-black text-xs"></i>
+          <span class="hidden md:inline">TikTok</span>
+        </a>
+        
+        <a href="https://wa.me/6285169685209?text=Halo%20Admin%20Alann%20Storee,%20saya%20mau%20tanya%20produk%20Aplikasi%20Premium%20%26%20Jasa%20Edit%20Preset%20AM" target="_blank" class="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold bg-[#25D366] text-white border-2 border-black shadow-brutal-sm hover:brightness-105 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-2">
+          <i class="fab fa-whatsapp text-base"></i>
+          <span class="hidden sm:inline">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 sm:pt-14 pb-20">
+    
+    <!-- Hero Section -->
+    <header class="text-center max-w-3xl mx-auto mb-14">
+      <div style="animation-delay: 0ms;" class="animate-fade-up inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border-[3px] border-black shadow-brutal text-xs sm:text-sm font-extrabold tracking-wider uppercase mb-6">
+        <span class="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse"></span>
+        DIGITAL APPS &amp; PRESET AM STUDIO
+      </div>
+      
+      <h1 style="animation-delay: 80ms;" class="animate-fade-up text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-black mb-4 leading-tight">
+        Aplikasi Premium <span class="text-blue-600">&</span> Jasa Edit Preset AM
+      </h1>
+      
+      <p style="animation-delay: 160ms;" class="animate-fade-up text-slate-600 text-base sm:text-lg font-medium max-w-xl mx-auto mb-8">
+        Aplikasi Premium legal bergaransi serta layanan khusus Jasa Edit Preset Alight Motion dengan efek halus &amp; sinkron beat.
+      </p>
+      
+      <!-- Hero Action Buttons -->
+      <div style="animation-delay: 240ms;" class="animate-fade-up flex flex-wrap items-center justify-center gap-3.5 mb-10">
+        <a href="#products" class="px-6 py-3.5 rounded-xl font-extrabold text-sm sm:text-base bg-blue-600 text-white border-[3px] border-black shadow-brutal hover:-translate-y-1 hover:shadow-brutal-lg hover:bg-blue-700 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-2.5">
+          <i class="fas fa-rocket"></i> Lihat Katalog
+        </a>
+        
+        <a href="https://wa.me/6285169685209?text=Halo%20Admin%20Alann%20Storee,%20saya%20ingin%20order%20Aplikasi%20Premium%20/%20Jasa%20Edit%20Preset%20AM" target="_blank" class="px-6 py-3.5 rounded-xl font-extrabold text-sm sm:text-base bg-white text-black border-[3px] border-black shadow-brutal hover:-translate-y-1 hover:shadow-brutal-lg hover:bg-slate-50 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-2.5">
+          <i class="fab fa-whatsapp text-[#16a34a] text-lg"></i> Chat WhatsApp
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029VbDSglRCxoB5Qn05xM1I" target="_blank" class="px-5 py-3.5 rounded-xl font-extrabold text-sm sm:text-base bg-white text-black border-[3px] border-black shadow-brutal hover:-translate-y-1 hover:shadow-brutal-lg hover:bg-emerald-50 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-2">
+          <i class="fas fa-bullhorn text-[#128c7e] text-base"></i> Saluran WA
+        </a>
+
+        <a href="https://www.tiktok.com/@lannnx12" target="_blank" class="px-5 py-3.5 rounded-xl font-extrabold text-sm sm:text-base bg-white text-black border-[3px] border-black shadow-brutal hover:-translate-y-1 hover:shadow-brutal-lg hover:bg-slate-100 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-2">
+          <i class="fab fa-tiktok text-black text-base"></i> TikTok
+        </a>
+      </div>
+
+      <!-- Stats Bar -->
+      <div style="animation-delay: 320ms;" class="animate-fade-up grid grid-cols-3 gap-3 sm:gap-5 max-w-xl mx-auto">
+        <div class="bg-white border-[3px] border-black rounded-2xl p-3.5 sm:p-4 shadow-brutal hover:-translate-y-1 hover:shadow-brutal-lg transition-all">
+          <div class="text-2xl sm:text-3xl font-extrabold text-black">1.2K+</div>
+          <div class="text-xs sm:text-sm font-bold text-slate-500 mt-0.5">Order Sukses</div>
+        </div>
+        <div class="bg-white border-[3px] border-black rounded-2xl p-3.5 sm:p-4 shadow-brutal hover:-translate-y-1 hover:shadow-brutal-lg transition-all">
+          <div class="text-2xl sm:text-3xl font-extrabold text-blue-600">100%</div>
+          <div class="text-xs sm:text-sm font-bold text-slate-500 mt-0.5">Full Garansi</div>
+        </div>
+        <div class="bg-white border-[3px] border-black rounded-2xl p-3.5 sm:p-4 shadow-brutal hover:-translate-y-1 hover:shadow-brutal-lg transition-all">
+          <div class="text-xl sm:text-3xl font-extrabold text-emerald-600">5-30 Mnt</div>
+          <div class="text-xs sm:text-sm font-bold text-slate-500 mt-0.5">Proses Kilat</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Features Section -->
+    <section style="animation-delay: 400ms;" class="animate-fade-up mb-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div class="bg-white border-[3px] border-black rounded-2xl p-5 shadow-brutal hover:-translate-y-1.5 hover:shadow-brutal-lg transition-all duration-200 group">
+          <div class="w-11 h-11 rounded-xl bg-blue-100 text-blue-600 border-2 border-black flex items-center justify-center text-lg mb-3.5 group-hover:scale-110 transition-transform">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3 class="font-extrabold text-lg text-black mb-1">Proses Cepat</h3>
+          <p class="text-sm text-slate-600 font-medium leading-relaxed">Akun aplikasi premium dan pesanan preset diproses dalam 5–30 menit setelah konfirmasi.</p>
+        </div>
+
+        <div class="bg-white border-[3px] border-black rounded-2xl p-5 shadow-brutal hover:-translate-y-1.5 hover:shadow-brutal-lg transition-all duration-200 group">
+          <div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-600 border-2 border-black flex items-center justify-center text-lg mb-3.5 group-hover:scale-110 transition-transform">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <h3 class="font-extrabold text-lg text-black mb-1">Legal &amp; Bergaransi</h3>
+          <p class="text-sm text-slate-600 font-medium leading-relaxed">100% akun resmi anti-hold dengan garansi penuh selama masa aktif berlangganan.</p>
+        </div>
+
+        <div class="bg-white border-[3px] border-black rounded-2xl p-5 shadow-brutal hover:-translate-y-1.5 hover:shadow-brutal-lg transition-all duration-200 group">
+          <div class="w-11 h-11 rounded-xl bg-purple-100 text-purple-600 border-2 border-black flex items-center justify-center text-lg mb-3.5 group-hover:scale-110 transition-transform">
+            <i class="fas fa-film"></i>
+          </div>
+          <h3 class="font-extrabold text-lg text-black mb-1">Preset AM Keren</h3>
+          <p class="text-sm text-slate-600 font-medium leading-relaxed">Khusus jasa edit preset Alight Motion dengan efek transisi halus &amp; beat sinkron.</p>
+        </div>
+
+        <div class="bg-white border-[3px] border-black rounded-2xl p-5 shadow-brutal hover:-translate-y-1.5 hover:shadow-brutal-lg transition-all duration-200 group">
+          <div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-600 border-2 border-black flex items-center justify-center text-lg mb-3.5 group-hover:scale-110 transition-transform">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3 class="font-extrabold text-lg text-black mb-1">Admin Fast Respon</h3>
+          <p class="text-sm text-slate-600 font-medium leading-relaxed">Konsultasi kebutuhan aplikasi maupun request preset langsung via WhatsApp.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Catalog Section -->
+    <section id="products" style="animation-delay: 480ms;" class="animate-fade-up scroll-mt-24">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-black mb-2">Pilih Paket &amp; Layanan</h2>
+        <p class="text-slate-600 font-medium">Klik <span class="font-bold text-black">Detail</span> untuk melihat rincian paket lengkap tanpa pindah halaman.</p>
+      </div>
+
+      <!-- Category Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-8">
+        <button class="tab-btn active px-5 py-2.5 rounded-xl font-extrabold text-sm border-[3px] border-black shadow-brutal hover:-translate-y-0.5 transition-all flex items-center gap-2 bg-blue-600 text-white cursor-pointer" data-tab="all">
+          <i class="fas fa-border-all"></i>
+          <span>Semua Produk</span>
+          <span class="px-2 py-0.5 text-xs rounded-md bg-black/20">5</span>
+        </button>
+
+        <button class="tab-btn px-5 py-2.5 rounded-xl font-extrabold text-sm border-[3px] border-black shadow-brutal hover:-translate-y-0.5 transition-all flex items-center gap-2 bg-white text-black hover:bg-slate-100 cursor-pointer" data-tab="apps">
+          <i class="fas fa-crown text-amber-500"></i>
+          <span>Aplikasi Premium</span>
+          <span class="px-2 py-0.5 text-xs rounded-md bg-slate-200 text-black">4</span>
+        </button>
+
+        <button class="tab-btn px-5 py-2.5 rounded-xl font-extrabold text-sm border-[3px] border-black shadow-brutal hover:-translate-y-0.5 transition-all flex items-center gap-2 bg-white text-black hover:bg-slate-100 cursor-pointer" data-tab="jasa">
+          <i class="fas fa-wand-magic-sparkles text-purple-600"></i>
+          <span>Jasa Edit Preset</span>
+          <span class="px-2 py-0.5 text-xs rounded-md bg-slate-200 text-black">1</span>
+        </button>
+      </div>
+
+      <!-- Products Grid -->
+      <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- 1. CAPCUT PRO -->
+        <div style="animation-delay: 520ms;" class="animate-fade-up product-card bg-white border-[3px] border-black rounded-2xl p-6 shadow-brutal hover:-translate-y-1.5 hover:shadow-brutal-lg hover:border-blue-600 transition-all duration-200 flex flex-col justify-between group" data-category="apps">
+          <div>
+            <!-- Top Badge & Small App Logo -->
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <div class="flex items-center gap-2.5">
+                <!-- Logo Kecil CapCut -->
+                <div class="w-10 h-10 rounded-xl bg-black text-white border-2 border-black flex items-center justify-center shadow-brutal-sm shrink-0 group-hover:scale-110 transition-transform">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 7l16 10M20 7L4 17"/>
+                    <path d="M4 7v10M20 7v10"/>
+                  </svg>
+                </div>
+                <span class="px-3 py-1 rounded-lg text-xs font-extrabold bg-slate-100 text-slate-800 border-2 border-black">
+                  Aplikasi Premium
+                </span>
+              </div>
+              <span class="px-2.5 py-1 rounded-lg text-xs font-extrabold bg-emerald-100 text-emerald-800 border-2 border-black">
+                BEST SELLER
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-2xl font-extrabold text-black mb-3 group-hover:text-blue-600 transition-colors">CapCut Pro</h3>
+
+            <!-- Specs Grid -->
+            <div class="grid grid-cols-3 gap-2 mb-4">
+              <div class="bg-slate-50 border-2 border-black rounded-xl p-2.5 text-center">
+                <div class="text-xs text-slate-500 font-bold mb-0.5"><i class="fas fa-calendar-alt text-blue-600"></i> Durasi</div>
+                <div class="text-xs sm:text-sm font-extrabold text-black">7Hr - 1Bln</div>
+              </div>
+              <div class="bg-slate-50 border-2 border-black rounded-xl p-2.5 text-center">
+                <div class="text-xs text-slate-500 font-bold mb-0.5"><i class="fas fa-user-shield text-blue-600"></i> Tipe</div>
+                <div class="text-xs sm:text-sm font-extrabold text-black">Share/Priv</div>
+              </div>
+              <div class="bg-slate-50 border-2 border-black rounded-xl p-2.5 text-center">
+                <div class="text-xs text-slate-500 font-bold mb-0.5"><i class="fas fa-mobile-screen text-blue-600"></i> Device</div>
+                <div class="text-xs sm:text-sm font-extrabold text-black">All OS</div>
+              </div>
+            </div>
+
+            <!-- Note -->
+            <div class="bg-blue-50/80 border-2 border-black/80 rounded-xl p-3 text-xs font-semibold text-slate-700 leading-relaxed mb-5">
+              <i class="fas fa-info-circle text-blue-600 mr-1"></i>
+              Unlock semua efek Pro, transisi, font premium, auto caption, &amp; ekspor 4K 60fps tanpa watermark. Garansi penuh!
+            </div>
+          </div>
+
+          <!-- Footer Price & Action -->
+          <div class="pt-4 border-t-2 border-dashed border-slate-300 flex flex-wrap items-center justify-between gap-2.5">
+            <div>
+              <div class="text-[11px] font-bold text-slate-500 uppercase">Harga Paket</div>
+              <div class="text-base sm:text-lg font-extrabold text-black font-mono">Rp 5.000 - Rp 25.000</div>
+            </div>
+            <div class="flex items-center gap-2 ml-auto">
+              <button onclick="openDetailModal('capcut')" class="px-3 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm bg-white text-black border-[2.5px] border-black shadow-brutal-sm hover:bg-slate-100 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-1.5 cursor-pointer">
+                <i class="fas fa-eye"></i> Detail
+              </button>
+              <button onclick="openOrderModal('CapCut Pro', 'Rp 5.000 - Rp 25.000', ['7 Hari (Private) - Rp 5.000','1 Bulan (Private) - Rp 25.000'])" class="px-3.5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm bg-[#25D366] text-white border-[2.5px] border-black shadow-brutal-sm hover:brightness-105 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-1.5 cursor-pointer">
+                <i class="fab fa-whatsapp text-base"></i> Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. ALIGHT MOTION PREMIUM -->
+        <div style="animation-delay: 590ms;" class="animate-fade-up product-card bg-white border-[3px] border-black rounded-2xl p-6 shadow-brutal hover:-translate-y-1.5 hover:shadow-brutal-lg hover:border-emerald-600 transition-all duration-200 flex flex-col justify-between group" data-category="apps">
+          <div>
+            <!-- Top Badge & Small App Logo -->
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <div class="flex items-center gap-2.5">
+                <!-- Logo Kecil Alight Motion -->
+                <div class="w-10 h-10 rounded-xl bg-emerald-500 text-black border-2 border-black flex items-center justify-center shadow-brutal-sm shrink-0 group-hover:scale-110 transition-transform">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L3 20h4.5l4.5-9.5L16.5 20H21L12 2zm0 11.5L9.5 19h5L12 13.5z"/>
+                  </svg>
+                </div>
+                <span class="px-3 py-1 rounded-lg text-xs font-extrabold bg-slate-100 text-slate-800 border-2 border-black">
+                  Aplikasi Premium
+                </span>
+              </div>
+              <span class="px-2.5 py-1 rounded-lg text-xs font-extrabold bg-amber-100 text-amber-800 border-2 border-black">
+                1 TAHUN
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-2xl font-extrabold text-black mb-3 group-hover:text-emerald-600 transition-colors">Alight Motion Premium</h3>
+
+            <!-- Specs Grid -->
+            <div class="grid grid-cols-3 gap-2 mb-4">
+              <div class="bg-slate-50 border-2 border-black rounded-xl p-2.5 text-center">
+                <div class="text-xs text-slate-500 font-bold mb-0.5"><i class="fas fa-calendar-alt text-emerald-600"></i> Durasi</div>
+                <div class="text-xs sm:text-sm font-extrabold text-black">1 Tahun</div>
+              </div>
+              <div class="bg-slate-50 border-2 border-black rounded-xl p-2.5 text-center">
+                <div class="text-xs text-slate-500 font-bold mb-0.5"><i class="fas fa-file-import text-emerald-600"></i> Preset</div>
+                <div class="text-xs sm:text-sm font-extrabold text-black">5MB Ke Atas</div>
+              </div>
+              <div class="bg-slate-50 border-2 border-black rounded-xl p-2.5 text-center">
+                <div class="text-xs text-slate-500 font-bold mb-0.5"><i class="fas fa-mobile-screen text-emerald-600"></i> Device</div>
+                <div class="text-xs sm:text-sm font-extrabold text-black">iOS / Andro</div>
+              </div>
+            </div>
+
+            <!-- Note -->
+            <div class="bg-emerald-50/80 border-2 border-black/80 rounded-xl p-3 text-xs font-semibold text-slate-700 leading-relaxed mb-5">
+              <i class="fas fa-info-circle text-emerald-600 mr-1"></i>
+              Bebas akses semua efek berbayar, support preset 5MB ke atas tanpa kendala, ekspor tanpa watermark, &amp; bebas iklan.
+            </div>
+          </div>
+
+          <!-- Footer Price & Action -->
+          <div class="pt-4 border-t-2 border-dashed border-slate-300 flex flex-wrap items-center justify-between gap-2.5">
+            <div>
+              <div class="text-[11px] font-bold text-slate-500 uppercase">Harga Paket</div>
+              <div class="text-xl font-extrabold text-black font-mono">Rp 5.000</div>
+            </div>
+            <div class="flex items-center gap-2 ml-auto">
+              <button onclick="openDetailModal('alight')" class="px-3 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm bg-white text-black border-[2.5px] border-black shadow-brutal-sm hover:bg-slate-100 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-1.5 cursor-pointer">
+                <i class="fas fa-eye"></i> Detail
+              </button>
+              <button onclick="openOrderModal('Alight Motion Premium', 'Rp 5.000', ['1 Tahun Full Garansi - Rp 5.000'])" class="px-3.5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm bg-[#25D366] text-white border-[2.5px] border-black shadow-brutal-sm hover:brightness-105 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-1.5 cursor-pointer">
+                <i class="fab fa-whatsapp text-base"></i> Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. CANVA PRO -->
+        <div style="animation-delay: 660ms;" class="animate-fade-up product-card bg-white border-[3px] border-black rounded-2xl p-6 shadow-brutal hover:-translate-y-1.5 hover:shadow-brutal-lg hover:border-cyan-600 transition-all duration-200 flex flex-col justify-between group" data-category="apps">
+          <div>
+            <!-- Top Badge & Small App Logo -->
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <div class="flex items-center gap-2.5">
+                <!-- Logo Kecil Canva -->
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#00C4CC] to-[#7D2AE8] text-white border-2 border-black flex items-center justify-center shadow-brutal-sm shrink-0 font-serif italic font-black text-xl group-hover:scale-110 transition-transform">
+                  C
+                </div>
+                <span class="px-3 py-1 rounded-lg text-xs font-extrabold bg-slate-100 text-slate-800 border-2 border-black">
+                  Aplikasi Premium
+                </span>
+              </div>
+              <span class="px-2.5 py-1 rounded-lg text-xs font-extrabold bg-cyan-100 text-cyan-800 border-2 border-black">
+                VIA INVITE
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-2xl font-extrabold text-black mb-3 group-hover:text-cyan-700 transition-colors">Canva Pro</h3>
+
+            <!-- Specs Grid -->
+            <div class="grid grid-cols-3 gap-2 mb-4">
+              <div class="bg-slate-50 border-2 border-black rounded-xl p-2.5 text-center">
+                <div class="text-xs text-slate-500 font-bold mb-0.5"><i class="fas fa-calendar-alt text-cyan-600"></i> Durasi</div>
+                <div class="text-xs sm:text-sm font-extrabold text-black">1 Bulan</div>
+              </div>
+              <div class="bg-slate-50 border-2 border-black rounded-xl p-2.5 text-center">
+                <div class="text-xs text-slate-500 font-bold mb-0.5"><i class="fas fa-envelope text-cyan-600"></i> Sistem</div>
+                <div class="text-xs sm:text-sm font-extrabold text-black">Akun Sendiri</div>
+              </div>
+              <div class="bg-slate-50 border-2 border-black rounded-xl p-2.5 text-center">
+                <div class="text-xs text-slate-500 font-bold mb-0.5"><i class="fas fa-unlock-alt text-cyan-600"></i> Fitur</div>
+                <div class="text-[11px] sm:text-xs font-extrabold text-black leading-tight">Membuka All Fitur Pro</div>
+              </div>
+            </div>
+
+            <!-- Note -->
+            <div class="bg-cyan-50/80 border-2 border-black/80 rounded-xl p-3 text-xs font-semibold text-slate-700 leading-relaxed mb-5">
+              <i class="fas fa-info-circle text-cyan-600 mr-1"></i>
+              Invite langsung ke email pribadi Anda. Membuka All Fitur Pro, akses 100 juta+ elemen &amp; template premium!
+            </div>
+          </div>
+
+          <!-- Footer Price & Action -->
+          <div class="pt-4 border-t-2 border-dashed border-slate-300 flex flex-wrap items-center justify-between gap-2.5">
+            <div>
+              <div class="text-[11px] font-bold text-slate-500 uppercase">Harga Paket</div>
+              <div class="text-xl font-extrabold text-black font-mono">Rp 5.000</div>
+            </div>
+            <div class="flex items-center gap-2 ml-auto">
+              <button onclick="openDetailModal('canva')" class="px-3 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm bg-white text-black border-[2.5px] border-black shadow-brutal-sm hover:bg-slate-100 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-1.5 cursor-pointer">
+                <i class="fas fa-eye"></i> Detail
+              </button>
+              <button onclick="openOrderModal('Canva Pro', 'Rp 5.000', ['1 Bulan Via Invite Email - Rp 5.000'])" class="px-3.5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm bg-[#25D366] text-white border-[2.5px] border-black shadow-brutal-sm hover:brightness-105 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-1.5 cursor-pointer">
+                <i class="fab fa-whatsapp text-base"></i> Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. NETFLIX PREMIUM -->
+        <div style="animation-delay: 730ms;" class="animate-fade-up product-card bg-white border-[3px] border-black rounded-2xl p-6 shadow-brutal hover:-translate-y-1.5 hover:shadow-brutal-lg hover:border-red-600 transition-all duration-200 flex flex-col justify-between group" data-category="apps">
+          <div>
+            <!-- Top Badge & Small App Logo -->
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <div class="flex items-center gap-2.5">
+                <!-- Logo Kecil Netflix -->
+                <div class="w-10 h-10 rounded-xl bg-black text-[#E50914] border-2 border-black flex items-center justify-center shadow-brutal-sm shrink-0 font-black text-xl tracking-tighter group-hover:scale-110 transition-transform">
+                  N
+                </div>
+                <span class="px-3 py-1 rounded-lg text-xs font-extrabold bg-slate-100 text-slate-800 border-2 border-black">
+                  Aplikasi Premium
+                </span>
+              </div>
+              <span class="px-2.5 py-1 rounded-lg text-xs font-extrabold bg-red-100 text-red-700 border-2 border-black">
+                UHD
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-2xl font-extrabold text-black mb-3 group-hover:text-red-600 transition-colors">Netflix Premium</h3>
+
+            <!-- Specs Grid -->
+            <div class="grid grid-cols-3 gap-2 mb-4">
+              <div class="bg-slate-50 border-2 border-black rounded-xl p-2.5 text-center">
+                <div class="text-xs text-slate-500 font-bold mb-0.5"><i class="fas fa-calendar-alt text-red-600"></i> Durasi</div>
+                <div class="text-xs sm:text-sm font-extrabold text-black">1Hari-1Bulan</div>
+              </div>
+              <div class="bg-slate-50 border-2 border-black rounded-xl p-2.5 text-center">
+                <div class="text-xs text-slate-500 font-bold mb-0.5"><i class="fas fa-lock text-red-600"></i> Profil</div>
+                <div class="text-xs sm:text-sm font-extrabold text-black">1P1U / 1P2U</div>
+              </div>
+              <div class="bg-slate-50 border-2 border-black rounded-xl p-2.5 text-center">
+                <div class="text-xs text-slate-500 font-bold mb-0.5"><i class="fas fa-tv text-red-600"></i> Kualitas</div>
+                <div class="text-xs sm:text-sm font-extrabold text-black">Ultra HD</div>
+              </div>
+            </div>
+
+            <!-- Note -->
+            <div class="bg-red-50/80 border-2 border-black/80 rounded-xl p-3 text-xs font-semibold text-slate-700 leading-relaxed mb-5">
+              <i class="fas fa-info-circle text-red-600 mr-1"></i>
+              Nonton film &amp; series kualitas UHD anti screen limit, tersedia pilihan durasi mulai dari 1 hari hingga 1 bulan penuh!
+            </div>
+          </div>
+
+          <!-- Footer Price & Action -->
+          <div class="pt-4 border-t-2 border-dashed border-slate-300 flex flex-wrap items-center justify-between gap-2.5">
+            <div>
+              <div class="text-[11px] font-bold text-slate-500 uppercase">Mulai Dari</div>
+              <div class="text-base sm:text-lg font-extrabold text-black font-mono">Rp 3.000 - Rp 20.000</div>
+            </div>
+            <div class="flex items-center gap-2 ml-auto">
+              <button onclick="openDetailModal('netflix')" class="px-3 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm bg-white text-black border-[2.5px] border-black shadow-brutal-sm hover:bg-slate-100 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-1.5 cursor-pointer">
+                <i class="fas fa-eye"></i> Detail
+              </button>
+              <button onclick="openOrderModal('Netflix Premium', 'Rp 3.000 - Rp 20.000', ['1 Hari (1P1U) - Rp 3.000', '7 Hari (1P1U) - Rp 10.000', '1 Bulan (1P1U) - Rp 20.000'])" class="px-3.5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm bg-[#25D366] text-white border-[2.5px] border-black shadow-brutal-sm hover:brightness-105 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-1.5 cursor-pointer">
+                <i class="fab fa-whatsapp text-base"></i> Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. JASA EDIT PRESET ALIGHT MOTION -->
+        <div style="animation-delay: 800ms;" class="animate-fade-up product-card bg-white border-[3px] border-black rounded-2xl p-6 shadow-brutal hover:-translate-y-1.5 hover:shadow-brutal-lg hover:border-purple-600 transition-all duration-200 flex flex-col justify-between md:col-span-2 lg:col-span-2 group" data-category="jasa">
+          <div>
+            <!-- Top Badge & Small Service Logo -->
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <div class="flex items-center gap-2.5">
+                <!-- Logo Kecil Jasa Edit Preset AM -->
+                <div class="w-10 h-10 rounded-xl bg-purple-600 text-white border-2 border-black flex items-center justify-center shadow-brutal-sm shrink-0 group-hover:scale-110 transition-transform">
+                  <i class="fas fa-wand-magic-sparkles text-lg"></i>
+                </div>
+                <span class="px-3 py-1 rounded-lg text-xs font-extrabold bg-purple-100 text-purple-900 border-2 border-black">
+                  Layanan Preset AM
+                </span>
+              </div>
+              <span class="px-2.5 py-1 rounded-lg text-xs font-extrabold bg-emerald-100 text-emerald-800 border-2 border-black">
+                OPEN SLOT
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-2xl font-extrabold text-black mb-3 group-hover:text-purple-700 transition-colors">Jasa Edit Preset Alight Motion</h3>
+
+            <!-- Specs Grid -->
+            <div class="grid grid-cols-3 gap-2.5 mb-4">
+              <div class="bg-slate-50 border-2 border-black rounded-xl p-2.5 text-center">
+                <div class="text-xs text-slate-500 font-bold mb-0.5"><i class="fas fa-sliders text-purple-600"></i> Gaya Edit</div>
+                <div class="text-xs sm:text-sm font-extrabold text-black">JJ / Velocity</div>
+              </div>
+              <div class="bg-slate-50 border-2 border-black rounded-xl p-2.5 text-center">
+                <div class="text-xs text-slate-500 font-bold mb-0.5"><i class="fas fa-link text-purple-600"></i> Output</div>
+                <div class="text-xs sm:text-sm font-extrabold text-black">Link AM / XML</div>
+              </div>
+              <div class="bg-slate-50 border-2 border-black rounded-xl p-2.5 text-center">
+                <div class="text-xs text-slate-500 font-bold mb-0.5"><i class="fas fa-music text-purple-600"></i> Audio</div>
+                <div class="text-xs sm:text-sm font-extrabold text-black">Sync Beat</div>
+              </div>
+            </div>
+
+            <!-- Note -->
+            <div class="bg-purple-50/80 border-2 border-black/80 rounded-xl p-3.5 text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed mb-5">
+              <i class="fas fa-info-circle text-purple-600 mr-1"></i>
+              Khusus menerima jasa edit preset Alight Motion (jedag-jedug, velocity, transisi halus, shake &amp; coloring sesuai request lagu). Hasil dikirim berupa link preset Alight Motion siap pakai.
+            </div>
+          </div>
+
+          <!-- Footer Price & Action -->
+          <div class="pt-4 border-t-2 border-dashed border-slate-300 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <div class="text-[11px] font-bold text-slate-500 uppercase">Harga Mulai</div>
+              <div class="text-xl font-extrabold text-black font-mono">Rp 5.000 <span class="text-xs font-sans font-semibold text-slate-500">/ preset</span></div>
+            </div>
+            <div class="flex items-center gap-2.5 ml-auto">
+              <button onclick="openDetailModal('jasa')" class="px-4 py-2.5 rounded-xl font-extrabold text-sm bg-white text-black border-[2.5px] border-black shadow-brutal-sm hover:bg-slate-100 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-1.5 cursor-pointer">
+                <i class="fas fa-eye"></i> Detail
+              </button>
+              <button onclick="openOrderModal('Jasa Edit Preset Alight Motion', 'Mulai Rp 5.000', ['Edit Preset Sesuai yang di inginkan - Mulai Rp 5.000+'])" class="px-5 py-2.5 rounded-xl font-extrabold text-sm bg-[#25D366] text-white border-[2.5px] border-black shadow-brutal-sm hover:brightness-105 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-2 cursor-pointer">
+                <i class="fab fa-whatsapp text-base"></i> Order WA
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Product Detail Modal (Halaman Detail Tanpa Pindah Halaman) -->
+  <div id="detail-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur-xs p-4">
+    <div class="bg-white border-[3px] border-black rounded-2xl w-full max-w-lg shadow-brutal-lg overflow-hidden animate-pop-in max-h-[90vh] flex flex-col">
+      <!-- Detail Modal Header -->
+      <div class="bg-slate-50 border-b-[3px] border-black px-5 py-4 flex items-center justify-between shrink-0">
+        <h3 id="detail-modal-header" class="font-extrabold text-lg text-black flex items-center gap-2">
+          <i class="fas fa-info-circle text-blue-600"></i> Detail Produk
+        </h3>
+        <button onclick="closeDetailModal()" class="w-8 h-8 rounded-lg bg-white border-2 border-black font-extrabold text-sm hover:bg-red-500 hover:text-white transition-colors cursor-pointer">
+          ✕
+        </button>
+      </div>
+
+      <!-- Detail Modal Body -->
+      <div id="detail-modal-body" class="p-5 overflow-y-auto space-y-4">
+        <!-- Konten diisi dinamis oleh JS -->
+      </div>
+
+      <!-- Detail Modal Footer -->
+      <div class="bg-slate-50 border-t-[3px] border-black px-5 py-3.5 flex items-center justify-end gap-2.5 shrink-0">
+        <button type="button" onclick="closeDetailModal()" class="px-4 py-2.5 rounded-xl font-extrabold text-sm bg-white text-black border-2 border-black hover:bg-slate-200 transition-all cursor-pointer">
+          Tutup
+        </button>
+        <button type="button" id="detail-order-btn" class="px-5 py-2.5 rounded-xl font-extrabold text-sm bg-[#25D366] text-white border-[2.5px] border-black shadow-brutal-sm hover:brightness-105 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-2 cursor-pointer">
+          <i class="fab fa-whatsapp text-base"></i> Lanjut Order
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Modal (Direct to WhatsApp) -->
+  <div id="order-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur-xs p-4">
+    <div class="bg-white border-[3px] border-black rounded-2xl w-full max-w-md shadow-brutal-lg overflow-hidden animate-pop-in">
+      <!-- Modal Header -->
+      <div class="bg-slate-50 border-b-[3px] border-black px-5 py-4 flex items-center justify-between">
+        <h3 class="font-extrabold text-lg text-black flex items-center gap-2">
+          <i class="fab fa-whatsapp text-[#25D366] text-xl"></i> Form Order WhatsApp
+        </h3>
+        <button onclick="closeOrderModal()" class="w-8 h-8 rounded-lg bg-white border-2 border-black font-extrabold text-sm hover:bg-red-500 hover:text-white transition-colors cursor-pointer">
+          ✕
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <form id="wa-order-form" onsubmit="submitWhatsAppOrder(event)" class="p-5 space-y-4">
+        <!-- Ringkasan Produk -->
+        <div class="bg-blue-50 border-2 border-black rounded-xl p-3.5 space-y-1.5">
+          <div class="flex justify-between text-xs font-bold text-slate-600">
+            <span>Produk Dipilih:</span>
+            <span id="modal-product-name" class="text-black font-extrabold">-</span>
+          </div>
+          <div class="flex justify-between text-sm font-extrabold text-blue-700 pt-1.5 border-t border-black/20">
+            <span>Estimasi Harga:</span>
+            <span id="modal-product-price" class="font-mono">-</span>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-extrabold uppercase text-slate-700 mb-1.5">Pilih Paket / Durasi</label>
+          <select id="cust-package" required class="w-full px-3.5 py-2.5 rounded-xl border-2 border-black text-sm font-bold bg-white focus:outline-none focus:ring-2 focus:ring-blue-600"></select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-extrabold uppercase text-slate-700 mb-1.5">Nama Anda</label>
+          <input type="text" id="cust-name" required placeholder="Masukkan nama panggilan" class="w-full px-3.5 py-2.5 rounded-xl border-2 border-black text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-blue-600">
+        </div>
+
+        <div>
+          <label class="block text-xs font-extrabold uppercase text-slate-700 mb-1.5">Catatan / Email / Request Lagu</label>
+          <textarea id="cust-note" rows="2" placeholder="Contoh: Email untuk Canva Pro / link lagu untuk preset AM..." class="w-full px-3.5 py-2.5 rounded-xl border-2 border-black text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+        </div>
+
+        <div class="pt-2 flex items-center gap-2.5">
+          <button type="button" onclick="closeOrderModal()" class="w-1/3 py-3 rounded-xl font-extrabold text-sm bg-slate-100 text-black border-2 border-black hover:bg-slate-200 transition-all cursor-pointer">
+            Batal
+          </button>
+          <button type="submit" class="w-2/3 py-3 rounded-xl font-extrabold text-sm bg-[#25D366] text-white border-[2.5px] border-black shadow-brutal-sm hover:brightness-105 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <i class="fab fa-whatsapp text-lg"></i> Lanjut ke WhatsApp
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t-[3px] border-black py-8 px-4 text-center">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm font-bold text-slate-700">
+        © 2026 <strong class="text-black">Alann Storee</strong> — Aplikasi Premium &amp; Jasa Edit Preset AM
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
+        <a href="https://wa.me/6285169685209" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-extrabold text-[#16a34a] hover:underline">
+          <i class="fab fa-whatsapp text-base"></i> WhatsApp Admin
+        </a>
+        <a href="https://whatsapp.com/channel/0029VbDSglRCxoB5Qn05xM1I" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-extrabold text-[#128c7e] hover:underline">
+          <i class="fas fa-bullhorn text-sm"></i> Saluran WA
+        </a>
+        <a href="https://www.tiktok.com/@lannnx12" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-extrabold text-black hover:underline">
+          <i class="fab fa-tiktok text-sm"></i> TikTok @lannnx12
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Buttons (TikTok, Saluran WA & Chat WhatsApp) -->
+  <div class="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-3">
+    <a href="https://www.tiktok.com/@lannnx12" target="_blank" title="Kunjungi TikTok @lannnx12" class="w-12 h-12 rounded-2xl bg-black text-white border-[3px] border-black shadow-brutal flex items-center justify-center text-lg hover:-translate-y-1 hover:shadow-brutal-lg transition-all">
+      <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://whatsapp.com/channel/0029VbDSglRCxoB5Qn05xM1I" target="_blank" title="Gabung Saluran WhatsApp" class="w-12 h-12 rounded-2xl bg-[#128c7e] text-white border-[3px] border-black shadow-brutal flex items-center justify-center text-lg hover:-translate-y-1 hover:shadow-brutal-lg transition-all">
+      <i class="fas fa-bullhorn"></i>
+    </a>
+    <a href="https://wa.me/6285169685209?text=Halo%20Admin%20Alann%20Storee,%20saya%20mau%20order%20di%20Alann%20Storee" target="_blank" title="Chat WhatsApp Admin" class="w-14 h-14 rounded-2xl bg-[#25D366] text-white border-[3px] border-black shadow-brutal flex items-center justify-center text-2xl hover:-translate-y-1 hover:shadow-brutal-lg transition-all">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <script>
+    // Konfigurasi Nomor WhatsApp Admin
+    const ADMIN_WA_NUMBER = '6285169685209';
+    let selectedProduct = { name: '', price: '' };
+
+    // Data Detail Produk (Untuk Modal Detail Tanpa Pindah Halaman)
+    const PRODUCT_DETAILS = {
+      capcut: {
+        title: 'CapCut Pro',
+        subtitle: 'Editing Video Profesional Tanpa Batas',
+        badge: 'Aplikasi Premium',
+        priceRange: 'Rp 5.000 - Rp 25.000',
+        packages: [
+          { name: '7 Hari (Private)', price: 'Rp 5.000' },
+          { name: '1 Bulan (Private)', price: 'Rp 25.000' }
+        ],
+        orderOptions: ['7 Hari (Private) - Rp 5.000', '1 Bulan (Private) - Rp 25.000'],
+        features: [
+          'Membuka semua efek, filter, transisi, dan stiker Pro',
+          'Fitur Auto Caption & Hapus Background Video otomatis',
+          'Export resolusi tinggi hingga 4K 60fps tanpa watermark',
+          'Full garansi selama masa aktif paket'
+        ]
+      },
+      alight: {
+        title: 'Alight Motion Premium',
+        subtitle: 'Aplikasi Motion Graphics & Preset Favorit',
+        badge: 'Aplikasi Premium',
+        priceRange: 'Rp 5.000',
+        packages: [
+          { name: '1 Tahun (Full Garansi)', price: 'Rp 5.000' }
+        ],
+        orderOptions: ['1 Tahun Full Garansi - Rp 5.000'],
+        features: [
+          'Support preset 5MB ke atas tanpa kendala',
+          'Semua efek premium, blending mode & keyframe terbuka',
+          'Export video jernih bebas watermark Alight Motion',
+          'Cocok untuk pengguna preset jedag-jedug maupun velocity'
+        ]
+      },
+      canva: {
+        title: 'Canva Pro',
+        subtitle: 'Desain Cepat & Praktis di Akun Sendiri',
+        badge: 'Aplikasi Premium',
+        priceRange: 'Rp 5.000',
+        packages: [
+          { name: '1 Bulan (Invite Email Pribadi)', price: 'Rp 5.000' }
+        ],
+        orderOptions: ['1 Bulan Via Invite Email - Rp 5.000'],
+        features: [
+          'Membuka All Fitur Pro (Background Remover, Magic Resize, Brand Kit)',
+          'Akses lebih dari 100 juta foto, font, video & elemen premium',
+          'Aktivasi langsung ke email pribadi Anda (bukan akun sharing)',
+          'Aman dan privasi desain tetap terjaga'
+        ]
+      },
+      netflix: {
+        title: 'Netflix Premium',
+        subtitle: 'Streaming Film & Series Kualitas 4K UHD',
+        badge: 'Aplikasi Premium',
+        priceRange: 'Rp 3.000 - Rp 20.000',
+        packages: [
+          { name: '1 Hari (1 Profile 1 User)', price: 'Rp 3.000' },
+          { name: '7 Hari (1 Profile 1 User)', price: 'Rp 10.000' },
+          { name: '1 Bulan (1 Profile 1 User)', price: 'Rp 20.000' }
+        ],
+        orderOptions: ['1 Hari (1P1U) - Rp 3.000', '7 Hari (1P1U) - Rp 10.000', '1 Bulan (1P1U) - Rp 20.000'],
+        features: [
+          'Pilihan durasi fleksibel mulai dari 1 hari hingga 1 bulan',
+          'Kualitas tayangan hingga 4K Ultra HD + HDR',
+          'Bisa digunakan di HP, Laptop, Tablet, maupun Smart TV',
+          'Full garansi selama masa berlangganan aktif'
+        ]
+      },
+      jasa: {
+        title: 'Jasa Edit Preset Alight Motion',
+        subtitle: 'Custom Preset AM Sesuai Lagu & Konsep Anda',
+        badge: 'Layanan Preset AM',
+        priceRange: 'Mulai Rp 5.000',
+        packages: [
+          { name: 'Edit Preset Sesuai yang di inginkan', price: 'Mulai Rp 5.000' }
+        ],
+        orderOptions: ['Edit Preset Sesuai yang di inginkan - Mulai Rp 5.000'],
+        features: [
+          'Khusus menerima jasa edit preset Alight Motion',
+          'Hasil akhir dikirim berupa document agar video tidak terkompres',
+          'Pengerjaan rapi sesuai preset yang Anda kirimkan',
+          'Tambahan + Rp 1.000 untuk jasa SWHD agar jernih saat post di status WA'
+        ]
+      }
+    };
+
+    // Filter Tab Kategori
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const productCards = document.querySelectorAll('.product-card');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-tab');
+
+        // Update style tombol aktif
+        tabButtons.forEach(b => {
+          b.classList.remove('bg-blue-600', 'text-white');
+          b.classList.add('bg-white', 'text-black');
+        });
+        btn.classList.remove('bg-white', 'text-black');
+        btn.classList.add('bg-blue-600', 'text-white');
+
+        // Filter kartu produk dengan animasi ulang
+        productCards.forEach((card, idx) => {
+          const category = card.getAttribute('data-category');
+          if (target === 'all' || category === target) {
+            card.style.display = 'flex';
+            card.style.animation = 'none';
+            card.offsetHeight; // trigger reflow
+            card.style.animation = `fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) ${idx * 60}ms backwards`;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Buka Modal Detail Produk
+    function openDetailModal(key) {
+      const item = PRODUCT_DETAILS[key];
+      if (!item) return;
+
+      document.getElementById('detail-modal-header').innerHTML = `<i class="fas fa-info-circle text-blue-600"></i> Detail ${item.title}`;
+
+      const rowsHtml = item.packages.map(p => `
+        <tr class="border-b-2 border-black last:border-b-0">
+          <td class="px-3.5 py-2.5 font-bold text-slate-800">${p.name}</td>
+          <td class="px-3.5 py-2.5 font-mono font-extrabold text-blue-700 text-right">${p.price}</td>
+        </tr>
+      `).join('');
+
+      const featuresHtml = item.features.map(f => `
+        <li class="flex items-start gap-2.5 text-xs sm:text-sm font-semibold text-slate-700">
+          <i class="fas fa-check-circle text-emerald-600 mt-0.5 shrink-0"></i>
+          <span>${f}</span>
+        </li>
+      `).join('');
+
+      document.getElementById('detail-modal-body').innerHTML = `
+        <div class="bg-slate-50 border-2 border-black rounded-xl p-4">
+          <span class="inline-block px-2.5 py-0.5 rounded-md text-[11px] font-extrabold bg-blue-100 text-blue-800 border border-black mb-1.5">${item.badge}</span>
+          <h4 class="text-xl font-extrabold text-black leading-tight">${item.title}</h4>
+          <p class="text-xs font-semibold text-slate-500 mt-0.5">${item.subtitle}</p>
+        </div>
+
+        <div>
+          <div class="text-xs font-extrabold uppercase text-slate-700 mb-2">Daftar Paket &amp; Harga:</div>
+          <div class="border-2 border-black rounded-xl overflow-hidden">
+            <table class="w-full text-xs sm:text-sm">
+              <thead class="bg-blue-50 border-b-2 border-black">
+                <tr>
+                  <th class="px-3.5 py-2 text-left font-extrabold text-black">Pilihan Paket</th>
+                  <th class="px-3.5 py-2 text-right font-extrabold text-black">Harga</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white">
+                ${rowsHtml}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <div class="text-xs font-extrabold uppercase text-slate-700 mb-2">Keunggulan &amp; Keterangan:</div>
+          <ul class="space-y-2 bg-slate-50 border-2 border-black rounded-xl p-3.5">
+            ${featuresHtml}
+          </ul>
+        </div>
+      `;
+
+      const orderBtn = document.getElementById('detail-order-btn');
+      orderBtn.onclick = () => {
+        closeDetailModal();
+        openOrderModal(item.title, item.priceRange, item.orderOptions);
+      };
+
+      const modal = document.getElementById('detail-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeDetailModal() {
+      const modal = document.getElementById('detail-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    document.getElementById('detail-modal').addEventListener('click', function(e) {
+      if (e.target === this) closeDetailModal();
+    });
+
+    // Buka Modal Order
+    function openOrderModal(name, price, packages) {
+      selectedProduct = { name, price };
+      document.getElementById('modal-product-name').textContent = name;
+      document.getElementById('modal-product-price').textContent = price;
+
+      const packageSelect = document.getElementById('cust-package');
+      packageSelect.innerHTML = '';
+      packages.forEach(pkg => {
+        const opt = document.createElement('option');
+        opt.value = pkg;
+        opt.textContent = pkg;
+        packageSelect.appendChild(opt);
+      });
+
+      const modal = document.getElementById('order-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    // Tutup Modal Order
+    function closeOrderModal() {
+      const modal = document.getElementById('order-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Tutup modal saat klik di luar area box
+    document.getElementById('order-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeOrderModal();
+      }
+    });
+
+    // Kirim Pesanan ke WhatsApp
+    function submitWhatsAppOrder(e) {
+      e.preventDefault();
+      const custName = document.getElementById('cust-name').value.trim();
+      const selectedPkg = document.getElementById('cust-package').value;
+      const custNote = document.getElementById('cust-note').value.trim() || '-';
+
+      const message = 
+`Halo Admin *Alann Storee* 👋
+Saya ingin melakukan pemesanan:
+
+- *Produk:* ${selectedProduct.name}
+- *Paket:* ${selectedPkg}
+- *Nama:* ${custName}
+- *Catatan/Request:* ${custNote}
+
+Mohon info pembayarannya ya kak. Terima kasih!`;
+
+      const waUrl = `https://wa.me/${ADMIN_WA_NUMBER}?text=${encodeURIComponent(message)}`;
+      window.open(waUrl, '_blank');
+      closeOrderModal();
+    }
+  </script>
+</body>
+
+</html>
